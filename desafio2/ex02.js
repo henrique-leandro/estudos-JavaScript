@@ -9,5 +9,5 @@ const myObject = {
 if(myObject.nationality === "Brasil"){
     console.log("A pessoa é Brasileira")
 }else {
-    console.log("A pessoa não é brasileira")
+    console.log("A pessoa é Estrangeira")
 }

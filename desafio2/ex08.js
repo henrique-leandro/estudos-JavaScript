@@ -2,3 +2,6 @@
 
 
 
+let mynumber = 65;
+
+if(mynumber % 2 === 0 && )
