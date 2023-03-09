@@ -36,3 +36,22 @@ console.log(`O primeiro numero é ${firstNumber}`)
 console.log(`O segundo numero é ${seccondNumber}`)
 
 console.log(`A multiplicação dos dois numero é ${multplique(firstNumber, seccondNumber)}`)
+
+
+
+// função anonima é quando uma variavel assume o valor de uma função ex:
+
+const multplique = function(number10, number20){
+    const result = number10 * number20
+    return result
+}
+
+let firstNumber1 = 20;
+let seccondNumber2 = 50;
+
+console.log(`O primeiro numero é ${firstNumber1}`)
+console.log(`O segundo numero é ${seccondNumber2}`)
+
+const resultado = multplique(firstNumber1, seccondNumber2);
+
+console.log(`A multiplicação dos dois numero é ${resultado}`)
