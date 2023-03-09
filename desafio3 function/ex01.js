@@ -1,0 +1,1 @@
+// escreva um programa onde, voce chame uma função eviando um numero, a função deve imprimir na tela os numeros de 1 ate o numero que voce enviou
