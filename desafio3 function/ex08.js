@@ -47,42 +47,42 @@ function calcularDesconto(nome, valor, primeiraCompra, pagamentoAvista) {
     if (primeiraCompra && pagamentoAvista) {
 
         if (valor > 1000) {
-            console.log(nome + "Voce ganhou 30% de desconto")
+            console.log(nome + " Voce ganhou 30% de desconto")
         }else if (valor < 1000 && valor > 500 ) {
-           console.log(nome + "voce ganhou 25% de desconto")
+           console.log(nome + " voce ganhou 25% de desconto")
         }else {
-            console.log(nome + "voce ganhou 20% de desconto")
+            console.log(nome + " voce ganhou 20% de desconto")
         }
     }
 
     if (primeiraCompra && !pagamentoAvista) {
 
         if(valor > 1000){
-            console.log(nome + "voce ganhou 20% de desconto")
+            console.log(nome + " voce ganhou 20% de desconto")
         }else if (valor < 1000 && valor > 500 ) {
-            console.log(nome + "voce ganhou 15% de desconto")
+            console.log(nome + " voce ganhou 15% de desconto")
          }else {
-             console.log(nome + "voce ganhou 10% de desconto")
+             console.log(nome + " voce ganhou 10% de desconto")
          }
     }
 
     if (!primeiraCompra && pagamentoAvista) {
         if(valor > 1000){
-            console.log(nome + "voce ganhou 20% de desconto")
+            console.log(nome + " voce ganhou 20% de desconto")
         }else if (valor < 1000 && valor > 500 ) {
-            console.log(nome + "voce ganhou 15% de desconto")
+            console.log(nome + " voce ganhou 15% de desconto")
          }else {
-             console.log(nome + "voce ganhou 10% de desconto")
+             console.log(nome + " voce ganhou 10% de desconto")
          }
     }
 
     if (!primeiraCompra && !pagamentoAvista) {
         if(valor > 1000){
-            console.log(nome + "voce ganhou 10% de desconto")
+            console.log(nome + " voce ganhou 10% de desconto")
         }else if (valor < 1000 && valor > 500 ) {
-            console.log(nome + "voce ganhou 5% de desconto")
+            console.log(nome + " voce ganhou 5% de desconto")
          }else {
-             console.log(nome + "Não recebe desconto")
+             console.log(nome + " Não recebe desconto")
          }
     }
 
