@@ -44,49 +44,89 @@ se o cliente não recebeu desconto, imprima na tela um agradecimento pela compra
 */
 
 function calcularDesconto(nome, valor, primeiraCompra, pagamentoAvista) {
+
+    let desconto30 = valor * 0.3;
+    let desconto25 = valor * 0.25;
+    let desconto20 = valor * 0.2;
+    let desconto15 = valor * 0.15;
+    let desconto10 = valor * 0.1
+    let desconto5 = valor * 0.05;
+
     if (primeiraCompra && pagamentoAvista) {
 
         if (valor > 1000) {
             console.log(nome + " Voce ganhou 30% de desconto")
-        }else if (valor < 1000 && valor > 500 ) {
-           console.log(nome + " voce ganhou 25% de desconto")
-        }else {
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto30}`)
+
+        } else if (valor < 1000 && valor > 500) {
+            console.log(nome + " voce ganhou 25% de desconto")
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto25}`)
+        } else {
             console.log(nome + " voce ganhou 20% de desconto")
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto20}`)
         }
     }
 
     if (primeiraCompra && !pagamentoAvista) {
 
-        if(valor > 1000){
+        if (valor > 1000) {
             console.log(nome + " voce ganhou 20% de desconto")
-        }else if (valor < 1000 && valor > 500 ) {
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto20}`)
+        } else if (valor < 1000 && valor > 500) {
             console.log(nome + " voce ganhou 15% de desconto")
-         }else {
-             console.log(nome + " voce ganhou 10% de desconto")
-         }
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto15}`)
+        } else {
+            console.log(nome + " voce ganhou 10% de desconto")
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto10}`)
+        }
     }
 
     if (!primeiraCompra && pagamentoAvista) {
-        if(valor > 1000){
+
+        if (valor > 1000) {
             console.log(nome + " voce ganhou 20% de desconto")
-        }else if (valor < 1000 && valor > 500 ) {
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto20}`)
+
+        } else if (valor < 1000 && valor > 500) {
             console.log(nome + " voce ganhou 15% de desconto")
-         }else {
-             console.log(nome + " voce ganhou 10% de desconto")
-         }
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto15}`)
+        } else {
+            console.log(nome + " voce ganhou 10% de desconto")
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto10}`)
+        }
     }
 
     if (!primeiraCompra && !pagamentoAvista) {
-        if(valor > 1000){
+        
+        let cupom = Math.floor(Math.random() * (20 - 10 + 1)) + 10;
+
+        if (valor > 1000) {
             console.log(nome + " voce ganhou 10% de desconto")
-        }else if (valor < 1000 && valor > 500 ) {
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto10}`)
+
+        } else if (valor < 1000 && valor > 500) {
             console.log(nome + " voce ganhou 5% de desconto")
-         }else {
-             console.log(nome + " Não recebe desconto")
-         }
+            console.log(`Valor total sem desconto: R$${valor}`)
+            console.log(`Valor total com desconto R$${valor - desconto5}`)
+
+        } else {
+            console.log(nome + " Não recebe desconto")
+            console.log(`valor total da compra ${valor}`)
+            console.log(`voce recebeu um cupom de ${cupom}% na proxima compra`)
+        }
     }
 
 }
 
 
-calcularDesconto('Henrique', 1000, true, true)
+calcularDesconto('Henrique', 100, false, false)
