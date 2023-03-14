@@ -121,7 +121,7 @@ function calcularDesconto(nome, valor, primeiraCompra, pagamentoAvista) {
 
         } else {
             console.log(nome + " Não recebe desconto")
-            console.log(`valor total da compra ${valor}`)
+            console.log(`valor total da compra R$${valor}`)
             console.log(`voce recebeu um cupom de ${cupom}% na proxima compra`)
         }
     }
@@ -129,4 +129,4 @@ function calcularDesconto(nome, valor, primeiraCompra, pagamentoAvista) {
 }
 
 
-calcularDesconto('Henrique', 100, false, false)
+calcularDesconto('Evelynda', 200, false, false)
