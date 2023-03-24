@@ -33,7 +33,7 @@
 
             <label>
                 converter <b>para:</b>
-                <select class="select-current">
+                <select id="currency-select">
                     <option>
                         US$ Dólar Americano
                     </option>
@@ -45,24 +45,24 @@
          
             <label>
                 <b>Valor</b>
-               <input type="number" placeholder="R$ 10.000,00">
+               <input id="input-reais" type="number" placeholder="R$ 10.000,00">
             </label>
 
-            <button type="button">Converter</button>
+            <button id="convert-button" type="button">Converter</button>
 
             <section>
-                <div class="current-container">
+                <div class="currency-container">
                     <img src="assets/bandeira-br.svg" alt="Bandeira Brasil">
-                    <p class="current-text">Real</p>
-                    <p class="current-value">R$ 10.000,00</p>
+                    <p class="currency-name">Real</p>
+                    <p class="currency-value" id="real-value-text">R$ 0,00</p>
                 </div>
 
                 <img class="arrow-img" src="assets/seta-pequena.png" alt="Seta">
 
-                <div class="current-container">
-                    <img class="bandeira" src="assets/bandeira-eua.svg" alt="Bandeira dos EUA">
-                    <p class="current-text">Dólar Americano</p>
-                    <p class="current-value">US$ 2.000,00</p>
+                <div class="currency-container">
+                    <img class="bandeira" id="currency-img" src="assets/bandeira-eua.svg" alt="Bandeira dos EUA">
+                    <p class="currency-name" id="currency-name">Dólar Americano</p>
+                    <p class="currency-value" id="currency-value-text">US$ 0,00</p>
                 </div>
             </section>
         </main>

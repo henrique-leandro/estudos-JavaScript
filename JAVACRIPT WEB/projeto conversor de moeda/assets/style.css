@@ -106,7 +106,7 @@ section{
 }
 
 
-.current-container{
+.currency-container{
     text-align: center;
     padding: 5px;
 }
@@ -117,14 +117,14 @@ img {
 
 }
 
-.current-text {
+.currency-name {
     font-weight: 400;
     font-size: 14px;
 
     color: #777777;
 }
 
-.current-value {
+.currency-value {
     font-weight: 700;
     font-size: 20px;
     color: #1B83E2;
