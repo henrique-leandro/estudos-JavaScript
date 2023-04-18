@@ -9,14 +9,18 @@
 
 body{
     background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
 .container {
    width: 375px;
    background-color: #f4f4f4;
-   margin: 0 auto;
-   margin-top: 10px;
+   
+   
   
 }
 
@@ -24,6 +28,9 @@ body{
 header {
    background-color: #1B83E2;
    height: 66px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 
@@ -31,8 +38,6 @@ h1{
     font-weight: 400;
     font-size: 24px;
     color: #F4F4F4;
-    text-align: center;
-    padding-top: 22px;
 }
 
 main {
@@ -103,12 +108,18 @@ button:active {
 section{
     border: 1px solid #1B83E2;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 
 .currency-container{
-    text-align: center;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 img {
@@ -128,9 +139,4 @@ img {
     font-weight: 700;
     font-size: 20px;
     color: #1B83E2;
-}
-
-.arrow-img {
-    margin: 0 auto;
-    display: block;
 }
