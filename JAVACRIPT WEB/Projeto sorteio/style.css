@@ -31,7 +31,7 @@ h2 {
 
 }
 
-#numeroSorteado {
+#numeros-sorteados {
     display: flex;
     justify-content: center;
     color: rgb(245, 245, 17);
@@ -118,4 +118,27 @@ button:hover {
 
 button:active {
     opacity: 0.8;
+}
+
+
+@media (max-width: 450px) {
+    
+    img {
+        width: 250px;
+    }
+    
+    #numeros-sorteados {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+        margin: 20px;
+    }
+    .numbers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin: 20px;
+    }
 }
