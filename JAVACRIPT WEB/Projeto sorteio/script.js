@@ -1,49 +1,36 @@
-let divNova = document.createElement("div") // cria uma nova div no html
+let divNumerosSorteados = document.getElementById('numeros-sorteados'); // Seleciona a div que conterá os números sorteados
+let btnSorteio = document.getElementById('btn-sorteio'); // Seleciona o botão "Sortear"
+let textSorteio = document.getElementById('textSort')
+
+let numerosSorteados = []; // Array para armazenar os números sorteados
 
 function generatorNumber() {
-
-    const min = Math.ceil(document.querySelector('#min-input').value) // aredonda o primeiro numero para baixo
-    const max = Math.floor(document.querySelector('#max-input').value) // arredonda o segundo numero para cima 
-
+    const min = Math.ceil(document.querySelector('#min-input').value);
+    const max = Math.floor(document.querySelector('#max-input').value);
     const result = Math.floor(Math.random() * (max - min + 1) + min);
 
-    let btnSorteio = document.getElementById('btn-sorteio')
-    let numeroSorteado = document.getElementsByClassName('numerosSorteados')
+    numerosSorteados.push(result); // Adiciona o número sorteado ao array
 
+    let numberText = document.createElement('p');
+    numberText.className = "numero-sorteados";
+    numberText.innerHTML = result;
 
-    let numberText = document.createElement('p') // cria o texto que vai ficar dentro da div
-    numberText.className = "numerosSorteados" // colocando uma class no elemento p
-    numberText.innerHTML = result // insere o numero sorteado na tela
+    divNumerosSorteados.appendChild(numberText); // Adiciona o número sorteado à div
 
-    numberText.className = "numerosSorteados" // colocando uma class no elemento p
-    numberText.innerHTML = result // insere o numero sorteado na tela
-
-    divNova.id = 'numeroSorteado' // coloca um id para a divNova
-    divNova.appendChild(numberText);
-
-    let textSortear = document.getElementById("textSort");
-    document.body.insertBefore(divNova, textSortear);
-    textSortear.innerHTML = "Número Sorteado"
-
-    if (numeroSorteado.length >= 10) {
-
-        alert("Limite de Numeros Sorteados Atingido!!!")
-        btnSorteio.disabled = true
-        //alert("Limite de Numeros Sorteados Atingido!!!")
+    if (numerosSorteados.length >= 10) {
+        alert("Limite de Números Sorteados Atingido!!!");
+        btnSorteio.disabled = true;
     }
-
-    if (numeroSorteado.length >= 2) {
-
-        textSortear.innerHTML = "Números Sorteados"
+    
+    if(numerosSorteados.length > 1){
+       textSorteio.innerHTML = "Números Sorteados"
     }
-
 }
 
 function deleteResult() {
-    numeroSorteado.innerHTML = ""
-    textSortear.innerHTML = "Sortear Número"
+    numerosSorteados = []; // Limpa o array de números sorteados
+    divNumerosSorteados.innerHTML = ""; // Limpa o conteúdo da div
+    textSorteio.innerHTML = "Sortear Número"
 
-    if(numeroSorteado.innerHTML == ""){
-        btnSorteio.disabled = false
-    }
+    btnSorteio.disabled = false; // Habilita o botão "Sortear" novamente
 }
