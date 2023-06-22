@@ -1,7 +1,7 @@
 /*
   ESTRUTURA DE REPETIÇÃO - FOR IN
 
-  usar com array
+  usar com objetos
   pega propriedade por propriedade
 
 */

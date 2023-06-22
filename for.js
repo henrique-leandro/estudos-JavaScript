@@ -10,14 +10,25 @@
 
 let nome = "henrique"
 
-for(let i = 0; i < 200; i++){
-    console.log(`${nome} ` + i)
+for(let i = 0; i < 10; i++){
+    //console.log(`${nome} ` + i)
 }
 
 
 
 let tabuada = 5
 
-for (let i = 0; i <= 10; i++){
-    console.log(`${tabuada} x ${i} = ${tabuada * i} `)
+for (let i = 1; i <= 10; i++){
+    //console.log(`${tabuada} x ${i} = ${tabuada * i} `)
 }
+
+
+const myArray = ["João", "Maria", "Pedro", "Henrique"]
+
+myArray.push("Evelyn")
+
+for ( let i = 0; i < myArray.length; i++){
+    console.log(myArray[i])
+}
+
+
