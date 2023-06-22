@@ -87,3 +87,30 @@ button:active {
     color: white;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
+
+.ativo {
+    opacity: 0.5;
+}
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 50px
+    }
+     
+    .box-numbers {
+        width: 330px;
+        padding-left: 8%;
+    }
+
+    .numbers {
+        font-size: 32px;
+        
+    }
+
+    buttton {
+        width: 87px;
+        font-size: 18px;
+    }
+    
+}

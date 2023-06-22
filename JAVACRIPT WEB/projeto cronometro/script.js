@@ -44,6 +44,10 @@ function Start() {
                 hr = "0" + hr
             }
         }
+
+        btnStart.classList.add("ativo")
+        btnStop.classList.remove("ativo")
+
         atualizaValor()
 
     }, 10);
@@ -60,6 +64,8 @@ function atualizaValor() {
 
 function Stop() {
     clearInterval(startTimer)
+    btnStop.classList.add("ativo")
+    btnStart.classList.remove("ativo")
 }
 
 function Reset() {
@@ -68,10 +74,12 @@ function Reset() {
    seg = "00"
    min = "00"
    hr = "00"
-
+   
    atualizaValor()
+   btnStart.classList.remove("ativo")
+   btnStop.classList.remove("ativo")
 }
 
-btnStart.addEventListener('click', Start)
-btnStop.addEventListener('click', Stop)
-btnReset.addEventListener('click', Reset)
+btnStart.addEventListener('click', Start);
+btnStop.addEventListener('click', Stop);
+btnReset.addEventListener('click', Reset);
