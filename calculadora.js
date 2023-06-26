@@ -34,4 +34,4 @@ const calcular = (number1, number2, operation) => {
     return result
 }
 
-console.log(calcular(140, 5, '/'))
+console.log(calcular(140, 5, '*'))
