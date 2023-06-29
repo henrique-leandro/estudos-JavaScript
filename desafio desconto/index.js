@@ -1,44 +1,48 @@
-const produtos = [100, 3, 20, 4, 300, 2, 60, 29, 9, 23]
+const cart = [10, 244, 99, 2, 20, 33, 250]
 
-let valorFinal = 0
+let finalValeuWithDiscount = 0
+let finalValueNotDiscount = 0
 
-function calculaDesconto(preco, desconto) {
 
-    const resultado = (preco * desconto) / 100
-    return resultado
+
+function calculateDiscount(price, discount) {
+
+    const result = (price * discount) / 100
+    return result
 }
 
-produtos.forEach((preco) => {
+function calculateTotalValue (price){
+      
+    return finalValueNotDiscount += price
+}
 
-    if( preco > 30){
-        const desconto = calculaDesconto(preco, 10)
+
+cart.forEach(value => {
+
+    if (value > 30) {
+
+        const discount = calculateDiscount(value, 10)
+        finalValeuWithDiscount += value - discount
+
+    } else {
+        finalValeuWithDiscount += value
         
-        valorFinal += (preco - desconto)
-    }else {
-       valorFinal += preco
     }
+
+
+});
+
+
+cart.forEach(valor => {
+    
+    calculateTotalValue (valor) 
+    
 })
 
-console.log(`O valor final da compra foi de R$ ${valorFinal.toFixed(2)}`)
+let valueEconomized = finalValueNotDiscount - finalValeuWithDiscount
 
 
-/*
-function desconto10(){
 
-    for( let i = 0; i < produtos.length; i++){
-
-        if (produtos[i] > 30) {
-
-            const desconto = (10 * produtos[i]) / 100
-
-     
-           console.log(`O preço do produto é : ${produtos[i]} e com o desconto ficará: ${produtos[i] - desconto}`)
-        }else {
-            console.log("Esse produto não tem desconto")
-        }
-     }
-}
-
-desconto10()
-
-*/
+console.log(`Valor Total R$ ${finalValueNotDiscount.toFixed(2)}
+Valor com Desconto R$ ${finalValeuWithDiscount.toFixed(2)}
+Valor economizado R$ ${valueEconomized.toFixed(2)}`)
