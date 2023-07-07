@@ -1,28 +1,3 @@
-/*
-  REDUCE
-
-   Retorna um valor ( pode ser um novo array, objeto, string, number, etc)
-
-   Aceita 4 aparametros
-     1 - acumulador
-     2 - valor atual
-     3 - index
-     4 - array completo
-
-
-*/
-
-const list = [1,2,3,4,5]
-
-
-
-const newList = list.reduce( (acc, current) => {
-
-    return acc + current
-}, 0)
-
-console.log(newList)
-
 const companies = [
     {name:'Samsung', marketValue: 50, CEO:'Kim Hyun Suk', foundedOn: 1938},
     {name:'Microsoft', marketValue: 415, CEO:'Satya Nadella', foundedOn: 1975},
@@ -33,9 +8,21 @@ const companies = [
 ]
 
 
-const marketValue = companies.reduce((acc, value) => {
-     
-  return acc + value.marketValue
-}, 0)
+const subMarketValue = company => {
+   company.marketValue = company.marketValue - company.marketValue / 10
 
-console.log(marketValue)
+   return company
+}
+
+const fundationBefore1980 = fundation => {
+   return fundation.foundedOn > 1980 
+}
+
+const sumMarketValue = (acc, current) => {
+    return acc + current.marketValue
+}
+
+
+const result = companies.map(subMarketValue).filter(fundationBefore1980).reduce(sumMarketValue, 0)
+
+console.log(result)

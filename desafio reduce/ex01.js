@@ -1,4 +1,4 @@
-
+// faça um programa onde some todos os marketValue das empresas 
 
 const companies = [
     {name:'Samsung', marketValue: 50, CEO:'Kim Hyun Suk', foundedOn: 1938},

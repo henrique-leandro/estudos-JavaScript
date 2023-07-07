@@ -24,9 +24,10 @@ const filterBeforeYear2mil = fundation => {
     return fundation.foundedOn < 2000
 }
 
-
 const sumMarketValue = (acc, current) => acc + current.marketValue
 
 const myBestCompanies = companies.map(add10porcentMarketValue).filter(filterBeforeYear2mil).reduce(sumMarketValue,0)
   
 console.log(myBestCompanies)
+
+

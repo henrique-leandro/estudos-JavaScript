@@ -1,5 +1,5 @@
 
-// criar um novo array apartir do array percorrido e verificar se a pessoa é vip ou não.
+// criar um novo array a partir do array percorrido e verificar se a pessoa é vip ou não.
 // criar uma nova propriedade no array chamada  sector e se a pessoa for vip fica no setor black e se não for fica no setor green
 
 const list = [
