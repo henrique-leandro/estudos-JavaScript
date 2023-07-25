@@ -9,7 +9,7 @@
 
   existe uma certa confusão quanto aos termos rest e restful. Entretanto ambos representam os mesmo principios. A diferença é apenas gramatical. Em outras palavras, sistemas que utilizam os principios Rest são chamados de Restful. ser Restful é cumprir os padroes Rest
 
-  REST: Conjunto de princiopios e arquitetura
+  REST: Conjunto de principios e arquitetura
   RESTful: uma API que segue os padroes REST
 
 
