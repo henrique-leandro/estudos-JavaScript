@@ -12,3 +12,6 @@ const person = {
 }
 
 module.exports = {multi, sum, person}
+
+
+// caso eu queria deixar esse arquivo visivel para outros arquivos e conseguir usar as funçoes que eu escrevi aqui em outro arquivo
